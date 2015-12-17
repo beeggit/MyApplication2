@@ -3,6 +3,7 @@ package as.myapplication;
 import android.os.AsyncTask;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -16,7 +17,7 @@ import org.ksoap2.serialization.SoapSerializationEnvelope;
 import org.ksoap2.transport.HttpTransportSE;
 
 
-public class MainActivity extends ActionBarActivity {
+public class MainActivity extends AppCompatActivity {
     //String great="";
     private static final String TAG = "MINE";
     @Override
@@ -54,16 +55,16 @@ public class MainActivity extends ActionBarActivity {
 
     public void WithNTLM()
     {
-        String namespace = "urn:microsoft-dynamics-schemas/page/customercard";
-        String url = "http://10.0.9.120:7047/DynamicsNAV/WS/EGI/Page/CustomerCard";
-        String soap_action = "urn:microsoft-dynamics-schemas/page/customercard:Read";
+        String namespace = "urn:microsoft-dynamics-schemas/page/salesorder";
+        String url = "http://10.0.9.120:7047/DynamicsNAV/WS/EGI/Page/SalesOrder";
+        String soap_action = "urn:microsoft-dynamics-schemas/page/salesorder:Read";
         String method_name = "Read";
         String great;
         try
         {
             SoapObject request = new SoapObject(namespace, method_name);
 
-            String custID = "0638";
+            String custID = "527655";
             PropertyInfo custProp = new PropertyInfo();
             custProp.setName("No");
             custProp.setValue(custID);
