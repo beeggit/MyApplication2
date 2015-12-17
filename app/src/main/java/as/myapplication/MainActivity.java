@@ -64,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
         {
             SoapObject request = new SoapObject(namespace, method_name);
 
-            String custID = "527655";
+            String custID = "527652";
             PropertyInfo custProp = new PropertyInfo();
             custProp.setName("No");
             custProp.setValue(custID);
